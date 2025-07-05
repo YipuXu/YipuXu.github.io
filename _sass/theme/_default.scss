@@ -3,17 +3,20 @@
    ========================================================================== */
 
 /* New professional color palette */
-$navy-dark:      #0B2545; // For text
-$blue-primary:   #134074; // For links and primary elements
-$blue-dark:      #13315C; // For link hovers
-$blue-steel:     #8DA9C4; // For borders and accents
-$off-white:      #EEF4ED; // For background
-$off-white-dark: #e3e9e7; // Slightly darker for footer/background variations
+$text-dark:      #353535; // 1. Main text
+$accent-teal:    #3C6E71; // 2. Secondary accent
+$bg-white:       #FFFFFF; // 3. Background
+$border-gray:    #D9D9D9; // 4. Border / Secondary BG
+$link-blue:      #284B63; // 5. Main link/accent
+
+/* Font stacks */
+$serif-font-family: "Lora", serif;
+$sans-serif-font-family: "Montserrat", sans-serif;
 
 /* Color codes used for the site */
 $danger-color               : #ee5f5b;
-$info-color                 : #2f7f93;
-$notice-color               : $blue-steel;
+$info-color                 : $link-blue;
+$notice-color               : $accent-teal;
 $success-color              : #62c462;
 $warning-color              : #f89406;
 
@@ -29,20 +32,24 @@ $sidebar-screen-min-width   : 1024px;
 
 /* Default light theme for the site */
 :root {
-    --global-base-color                 : #{$navy-dark};
-    --global-bg-color                   : #{$off-white};
-    --global-footer-bg-color            : #{$off-white-dark};
-    --global-border-color               : #{$blue-steel};
-    --global-dark-border-color          : mix(#000, #{$blue-steel}, 25%);
-    --global-code-background-color      : #{$off-white-dark};
-    --global-code-text-color            : mix(#000, #{$navy-dark}, 80%);
-    --global-fig-caption-color          : mix(#fff,  #{$navy-dark}, 40%);
-    --global-link-color                 : #{$blue-primary};
-    --global-link-color-hover           : #{$blue-dark};
-    --global-link-color-visited         : mix(#fff, #{$blue-primary}, 25%);  
-    --global-masthead-link-color        : #{$navy-dark};
-    --global-masthead-link-color-hover  : #{$blue-primary};    
-    --global-text-color                 : #{$navy-dark};
-    --global-text-color-light           : mix(#fff, #{$navy-dark}, 50%);
-    --global-thead-color                : #{$off-white-dark};
+    --global-base-color                 : #{$text-dark};
+    --global-bg-color                   : #{$bg-white};
+    --global-footer-bg-color            : mix(#000, #{$bg-white}, 5%); // a very light gray
+    --global-border-color               : #{$border-gray};
+    --global-dark-border-color          : mix(#000, #{$border-gray}, 40%);
+    --global-code-background-color      : mix(#000, #{$bg-white}, 5%);
+    --global-code-text-color            : mix(#000, #{$text-dark}, 80%);
+    --global-fig-caption-color          : mix(#fff,  #{$text-dark}, 20%);
+    --global-link-color                 : #{$link-blue};
+    --global-link-color-hover           : mix(#000, #{$link-blue}, 25%);
+    --global-link-color-visited         : mix(#fff, #{$link-blue}, 25%);  
+    --global-masthead-link-color        : #{$text-dark};
+    --global-masthead-link-color-hover  : #{$link-blue};    
+    --global-text-color                 : #{$text-dark};
+    --global-text-color-light           : mix(#fff, #{$text-dark}, 35%);
+    --global-thead-color                : #{$border-gray};
+
+    /* Typography */
+    --global-font-family                : #{$serif-font-family};
+    --global-heading-font-family        : #{$sans-serif-font-family};
 }

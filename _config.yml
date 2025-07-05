@@ -24,7 +24,10 @@ author:
   avatar           : "profile.png"
   name             : "Yipu Xu"
   pronouns         : # example: "she/her"  
-  bio              : "Master's Student in Information Technology at Monash University | Data Scientist & Researcher specializing in Urban Computing, Public Health Intelligence, and Machine Learning | Experienced in Cloud Computing and AI-driven Solutions"
+  bio              : >-
+    Master's Student in Information Technology, Monash University.<br>
+    Data Scientist & Researcher specializing in Urban Computing, Public Health Intelligence, and Machine Learning.<br>
+    Experienced in Cloud Computing and AI-driven Solutions.
   location         : "Clayton, Australia"
   employer         : "Monash University"
   uri              : # URL

@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: custom
 title: "Publications"
 permalink: /publications/
 author_profile: true
@@ -30,6 +30,40 @@ author_profile: true
   {% for post in site.publications reversed %}
     {% include archive-single.html %}
   {% endfor %}
+{% endif %}
+
+{% if site.publications %}
+  <div class="publications-grid">
+    {% for post in site.publications reversed %}
+      <div class="publication-item">
+        <h3 class="publication-title">
+          <a href="{{ post.url | relative_url }}" rel="permalink">{{ post.title }}</a>
+        </h3>
+        
+        <div class="publication-meta">
+          <span class="publication-venue">{{ post.venue }}</span>
+          <span class="publication-date">{{ post.date | date: "%Y" }}</span>
+        </div>
+        
+        {% if post.excerpt %}
+          <div class="publication-excerpt">
+            {{ post.excerpt | markdownify | strip_html | truncate: 200 }}
+          </div>
+        {% endif %}
+        
+        <div class="publication-links">
+          {% if post.paperurl %}
+            <a href="{{ post.paperurl }}" class="publication-link">Paper</a>
+          {% endif %}
+          {% if post.citation %}
+            <a href="{{ post.url | relative_url }}" class="publication-link">Citation</a>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% else %}
+  <p>No publications found.</p>
 {% endif %}
 
 
