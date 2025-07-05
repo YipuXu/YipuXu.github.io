@@ -14,8 +14,9 @@ layout: default
       </header>
       
       <div class="archive__grid">
-        {% for post in site.portfolio reversed %}
-          <a href="{{ post.url | relative_url }}" class="archive__item">
+        {% assign projects = site.portfolio | sort: "order" %}
+        {% for post in projects %}
+          <a href="{{ post.url | relative_url }}" class="archive__item" style="animation-delay: {{ forloop.index0 | times: 100 }}ms;">
             <div class="archive__item-teaser">
               {% if post.header.teaser %}
                 <img src="{{ post.header.teaser | relative_url }}" alt="">
