@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Hi there! I'm **Yipu Xu** (徐一谱), a passionate data scientist and researcher currently pursuing my Master's degree in Information Technology at Monash University, Australia. 
+Hi there! I'm **Yipu Xu** (徐亦璞), a passionate data scientist and researcher currently pursuing my Master's degree in Information Technology at Monash University, Australia. 
 
 ## My Story
 
