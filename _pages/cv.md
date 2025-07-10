@@ -9,156 +9,95 @@ redirect_from:
 
 {% include base_path %}
 
-You can also download my CV as a [PDF file]({{ base_path }}/files/yipu_xu_cv.pdf).
+
+You can also download my CV as a [PDF file]({{ base_path }}/files/YipuXu_CV.pdf).
+
+## Research Interest
+
+- **Urban Computing & Public Health Intelligence**
+- **Clinical Natural Language Processing (NLP)**
+- **Intelligent Decision Support Systems**
+- **Human-AI Collaboration**
 
 ## Education
 
 **Master of Information Technology**  
-*Monash University, Melbourne, Australia*  
-*2023 - Present*
+*Monash University, Australia*  
+*Jul 2024 – Now*
 
-- Specialization: Data Science and Machine Learning
-- Relevant Coursework: Advanced Database Systems, Machine Learning, Data Mining, Statistical Computing
-- Research Focus: Urban Computing and Public Health Intelligence
+**Main Course:** Foundations of Data Science (92/100, HD), Cloud Computing and Security (90/100, HD), IT Research Methods (86/100, HD), Advanced Database Technology (80/100, HD).  
+**GPA:** 80/100 (WAM)
 
-**Bachelor of Information Management and Information Systems**  
-*Wenzhou Medical University, Wenzhou, China*  
-*2019 - 2023*
+**Bachelor of Information Management and Information System**  
+*Wenzhou Medical University, China*  
+*Sept 2019 - Jun 2023*
 
-- GPA: 3.8/4.0
-- Thesis: "AI-Driven Othello Game Implementation with Strategic Analysis"
-- Relevant Coursework: Database Systems, Software Engineering, Data Structures, Statistics
+**Main Course:** C#, Python, SQL Server, Oracle, ASP.Net, Android App, MATLAB  
+**GPA:** 78.95/100 (WAM)
 
-## Technical Skills
+## Project Experience
 
-**Programming Languages**
-- Python (Advanced): Pandas, NumPy, Scikit-learn, TensorFlow, Django
-- R (Intermediate): Data analysis, Statistical modeling, Visualization
-- SQL (Advanced): MySQL, PostgreSQL, MongoDB
-- C# (Intermediate): .NET Framework, Object-oriented programming
-- JavaScript (Intermediate): Node.js, React basics
+**Urban Computing: An Accessibility and Efficiency Analysis of Melbourne's Public Transport**  
+*Urban Computing Researcher, supervised by, at Monash University, Clayton*
 
-**Data Science & Analytics**
-- Machine Learning: Supervised/Unsupervised learning, XGBoost, Random Forest
-- Statistical Analysis: Hypothesis testing, Regression analysis, Time series
-- Data Visualization: Matplotlib, Seaborn, ggplot2, Tableau
-- Big Data: Apache Spark basics, Hadoop ecosystem
+- **Core Research:** Systematically evaluated the public transport network in Melbourne's Box Hill area by integrating PTV GTFS and ABS geographical datasets, leveraging SQL and QGIS for spatial analysis.
+- **Methods & Implementation:** Developed a comprehensive accessibility scoring model to quantify service levels and precisely identified unserved mesh blocks with over 300m walking distance. Assessed network efficiency by peak-hour passenger flow, service duration, and average waiting times.
+- **Key Findings & Impact:** Revealed the network's heavy reliance on buses and insufficient rail coverage. Pinpointed low-accessibility hotspots and long-wait bottlenecks, providing data-driven optimization recommendations to Public Transport Victoria.
 
-**Cloud & DevOps**
-- AWS: Lambda, S3, EC2, RDS
-- Version Control: Git, GitHub
-- Containerization: Docker basics
-- CI/CD: Basic pipeline setup
+**Machine Learning: Predictive Analysis of Chatbot Dialogue Utility**  
+*Machine Learning Researcher, supervised by, at Monash University, Clayton*
 
-**GIS & Spatial Analysis**
-- QGIS, ArcGIS
-- Spatial data analysis and visualization
-- Network analysis for transportation systems
+- **Core Research:** Predicted the utility scores of human-chatbot interactions using machine learning techniques and analyzed key factors influencing dialogue quality.
+- **Methods & Implementation:** Engineered composite features covering both conversational structure and semantics (TF-IDF, PCA, LDA, SVD). Selected XGBoost as the core model, achieving over a 20% improvement in key metrics (RMSE/MAE) compared to baselines after hyperparameter tuning.
+- **Outcome:** Utilized SHAP for model interpretability, providing deep insights for enhancing chatbot dialogue quality.
+
+**Environmental Data Science: Correlating Bushfires, Land Cover, and Agricultural Impact**  
+*Data Analytics Researcher, supervised by, at Monash University, Clayton*
+
+- **Core Research:** Investigated the complex correlations between wildfires and agricultural ecosystems (especially wheat) by integrating diverse datasets (forestry, agriculture, meteorology, insurance).
+- **Methods & Implementation:** Cleaned and integrated datasets using R; employed EDA to confirm a significant positive correlation between fire frequency and forest/grassland coverage and identified a lagged negative impact of severe fire seasons on the following year's wheat yield.
+- **Outcome:** Developed linear regression and PCA models to quantify key factors and utilized a time-series approach, accounting for the "Black Summer" anomaly, to forecast future fire and agricultural trends.
+
+**Predictive Modeling: KNN Regression for Residential Market Price Prediction**  
+*Machine Learning Researcher, supervised by, at Monash University, Clayton*
+
+- **Project Overview:** Conducted an end-to-end machine learning workflow, including feature engineering on text descriptions (regex), data preprocessing (one-hot encoding, scaling), and building an optimized KNN regression model validated with 10-fold cross-validation.
+
+**Cloud Application Development: A Serverless Media Analysis Platform on AWS**  
+*Cloud Application Developer, supervised by, at Monash University, Clayton*
+
+- **Project Overview:** Designed and deployed a scalable, serverless cloud application. Utilized AWS Lambda and Python to implement AI-driven auto-tagging of media files upon S3 upload and provided a comprehensive media management service via a RESTful API.
+
+## Internship Experience
+
+**Hardware Engineer & Database Administrator at Hangzhou First People's Hospital**  
+*Jul. 2022 – Apr. 2023*
+
+- Managed software/hardware maintenance, deployment, and troubleshooting for over 500 terminal devices across 20+ clinical and administrative departments.
+- Independently diagnosed and resolved an average of 25+ technical support tickets weekly, maintaining an average fault recovery time of under 2 hours and ensuring the stability of the HIS.
+- Executed over 1,000 data addition and modification requests in the database with a zero-error rate.
 
 ## Research Experience
 
-**Research Assistant**  
-*Monash University, Melbourne*  
-*March 2024 - Present*
+**Design and Implementation of a Human-Computer Othello Game System Based on Evaluation Functions and Game Tree Search**  
+*Undergraduate Thesis Researcher, supervised by Prof. Wei Xu at Wenzhou Medical University, Zhejiang*
 
-- Conducting research on urban computing applications in public transportation
-- Developing predictive models for transport accessibility analysis
-- Collaborating with Melbourne city council on data-driven urban planning initiatives
-- Published preliminary findings in university research symposium
+- **Core Research:** Investigated the AI decision-making process in human-computer games, focusing on game tree search, heuristic evaluation functions, and strategic choices.
+- **Methods & Implementation:** Based on the Minimax principle, designed and implemented a composite heuristic evaluation function combining positional, mobility, and greedy strategies to guide AI decisions. Developed the complete system in C#, including data persistence.
 
-**Undergraduate Research Project**  
-*Wenzhou Medical University*  
-*September 2022 - June 2023*
+## Vocational Skills
 
-- Designed and implemented an AI-powered Othello game using C# and .NET
-- Developed strategic AI algorithms with minimax and alpha-beta pruning
-- Conducted performance analysis and optimization of game algorithms
-- Presented findings at undergraduate research conference
+- **Programming Languages:** Python (Proficient), R (Proficient), C#, Java, JavaScript/TypeScript
+- **Data Science & Machine Learning:**
+  - **Frameworks & Libraries:** Scikit-learn, XGBoost, PyTorch, TensorFlow, Caret, Tidyverse, ggplot2
+  - **Algorithms:** Linear/Logistic Regression, Random Forest, XGBoost, KNN, CNN, PCA, LDA, Clustering, Sequential Pattern Mining
+  - **NLP:** TF-IDF, Word Embeddings, Topic Modeling, SHAP (Model Interpretability)
+- **Database Technologies:** SQL (Proficient), SQL Server, PostgreSQL/PostGIS, Oracle
+- **Cloud & Development:** AWS (Lambda, S3), Vue, Node.js, RESTful API Design, Postman
+- **Visualization Tools:** QGIS, ECharts, AntV, Tableau
 
-## Professional Experience
+## Additional Information
 
-**Data Analytics Intern**  
-*Wenzhou Digital Health Initiative*  
-*June 2022 - August 2022*
-
-- Analyzed patient flow data to optimize hospital resource allocation
-- Developed automated reporting systems using Python and SQL
-- Created interactive dashboards for healthcare administrators
-- Improved data processing efficiency by 40%
-
-**Teaching Assistant**  
-*Wenzhou Medical University*  
-*September 2021 - June 2022*
-
-- Assisted in Database Systems and Programming Fundamentals courses
-- Provided tutoring and support to 50+ undergraduate students
-- Developed supplementary learning materials and coding exercises
-- Received excellent feedback from students and faculty
-
-## Projects
-
-**Melbourne Public Transport Accessibility Analysis**  
-*Urban Computing | GIS Analysis | Python*
-- Analyzed Melbourne's public transport network for accessibility gaps
-- Used GTFS data and spatial analysis to identify underserved areas
-- Developed visualization tools for urban planners
-- Presented findings to Melbourne transport authority
-
-**Chatbot Dialogue Utility Prediction**  
-*Machine Learning | NLP | XGBoost*
-- Built predictive models for human-chatbot interaction effectiveness
-- Processed and analyzed large-scale dialogue datasets
-- Achieved 85% accuracy in utility prediction
-- Implemented feature engineering for dialogue quality assessment
-
-**Environmental Data Science: Bushfire Impact Analysis**  
-*Data Analytics | R | Time Series*
-- Investigated correlations between bushfires and agricultural productivity
-- Analyzed satellite imagery and climate data over 5-year period
-- Developed predictive models for agricultural risk assessment
-- Created interactive web application for farmers and policymakers
-
-**Serverless Media Analysis Platform**  
-*Cloud Computing | AWS | Python*
-- Designed scalable media processing pipeline using AWS Lambda
-- Implemented automated image and video analysis workflows
-- Achieved 60% cost reduction compared to traditional server-based solutions
-- Deployed machine learning models for content classification
-
-## Publications & Presentations
-
-**Conference Presentations**
-- "Urban Computing Applications in Public Transportation Analysis" - Monash University Research Symposium, 2024
-- "AI Strategy Development in Game Theory Applications" - Wenzhou Medical University Undergraduate Conference, 2023
-
-**Technical Writing**
-- Blog posts on data science applications in urban planning (Medium, 2024)
-- Technical documentation for open-source GIS analysis tools (GitHub, 2024)
-
-## Certifications
-
-- **AWS Certified Cloud Practitioner** (2024)
-- **Google Analytics Certified** (2023)
-- **Microsoft Azure Fundamentals** (2023)
-
-## Languages
-
-- **Chinese (Mandarin)**: Native
-- **English**: Fluent (IELTS: 7.5)
-- **Japanese**: Basic conversational
-
-## Awards & Recognition
-
-- **Dean's List** - Wenzhou Medical University (2021, 2022)
-- **Outstanding Undergraduate Research Award** - Wenzhou Medical University (2023)
-- **International Student Scholarship** - Monash University (2023-2024)
-
-## Professional Memberships
-
-- **IEEE Student Member** (2023-Present)
-- **ACM Student Member** (2024-Present)
-- **Data Science Society of Australia** - Student Member (2024-Present)
-
----
-
-*Last updated: {{ site.time | date: "%B %Y" }}*
+**Awards:** Third-class Scholarship (2020)  
+**Language:** IELTS Overall 6.5 (Writing 7.0)  
+**References available upon request**

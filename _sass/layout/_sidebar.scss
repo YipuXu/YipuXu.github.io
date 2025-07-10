@@ -91,15 +91,18 @@
     display: block;
     width: auto;
     height: auto;
+    text-align: center; // Center the avatar
   }
 
   img {
     max-width: 175px;
     border-radius: 50%;
+    display: block; // Make img block element for centering
 
     @include breakpoint($large) {
       padding: 5px;
       border: 1px solid var(--global-border-color);
+      margin: 0 auto; // Center the image horizontally
     }
   }
 }
@@ -116,6 +119,7 @@
     width: 100%;
     padding-left: 0;
     padding-right: 0;
+    text-align: center; // Center all content including name
   }
 }
 
@@ -125,6 +129,7 @@
   @include breakpoint($large) {
     margin-top: 10px;
     margin-bottom: 10px;
+    text-align: center; // Explicitly center the name
   }
 }
 .sidebar .author__name {
@@ -145,6 +150,7 @@
   @include breakpoint($large) {
     margin-top: 10px;
     margin-bottom: 10px;
+    font-size: 0.9rem; // Further reduced font size for pronouns
   }
 }
 
@@ -154,6 +160,7 @@
   @include breakpoint($large) {
     margin-top: 10px;
     margin-bottom: 20px;
+    font-size: 0.9rem; // Further reduced font size for bio
   }
 }
 
@@ -250,11 +257,12 @@
   a {
     display: block;
     margin-bottom: 5px;
+    padding-left: 10px; // Add left padding for spacing
     padding-right: 5px;
     padding-top: 2px;
     padding-bottom: 2px;
     color: inherit;
-    font-size: $type-size-5;
+    font-size: 0.9em; // Changed from $type-size-5 to 0.75rem
     text-decoration: none;
 
     &:hover {

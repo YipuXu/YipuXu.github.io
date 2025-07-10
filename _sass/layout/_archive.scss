@@ -65,7 +65,7 @@
   p {
     margin: 0;
     color: var(--global-text-color-light);
-    font-size: $type-size-6;
+  font-size: $type-size-6;
   }
 
   text-indent: 0;
@@ -889,6 +889,9 @@
   
   .project-content {
     padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 180px); // Subtract image height to make content fill remaining space
     
     h3 {
       font-family: 'Montserrat', $sans-serif;
@@ -918,29 +921,38 @@
       font-size: 0.9rem;
       color: #7f8c8d;
       line-height: 1.5;
-      margin: 0 0 1rem 0;
+      margin: 0 0 auto 0; // Push tags to bottom with auto margin
+      flex: 1; // Take up remaining space
     }
   }
 }
 
 .project-tags {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; // Keep tags on same line
   gap: 0.5rem;
   margin-top: 1rem;
+  overflow-x: auto; // Allow horizontal scrolling if needed
+  scrollbar-width: none; // Hide scrollbar in Firefox
+  -ms-overflow-style: none; // Hide scrollbar in IE/Edge
+  
+  &::-webkit-scrollbar {
+    display: none; // Hide scrollbar in WebKit browsers
+  }
   
   .tag {
     background: linear-gradient(135deg, #3498db, #2980b9);
     color: white;
-    font-size: 0.75rem;
+    font-size: 0.75rem; // Reduced from 0.75rem to make tags smaller
     font-weight: 500;
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
+    padding: 0.2rem 0.6rem; // Reduced padding for more compact tags
+    border-radius: 16px; // Slightly smaller border radius
     font-family: 'Montserrat', $sans-serif;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.25px; // Reduced letter spacing
+    white-space: nowrap; // Prevent tag text from wrapping
+    flex-shrink: 0; // Prevent tags from shrinking
     
     &:hover {
-      transform: translateY(-1px);
       box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
     }
   }

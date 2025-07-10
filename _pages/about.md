@@ -101,7 +101,7 @@ Here are some of the key technologies and tools I'm proficient with:
 
 <div class="tech-stack-container">
   <div class="tech-category">
-    <h4>Programming &amp; Data</h4>
+    <h4><i class="fas fa-code"></i> Programming &amp; Data</h4>
     <div class="tech-pills">
       <span class="tech-pill">Python</span>
       <span class="tech-pill">R</span>
@@ -113,7 +113,7 @@ Here are some of the key technologies and tools I'm proficient with:
     </div>
   </div>
   <div class="tech-category">
-    <h4>Data Science &amp; ML</h4>
+    <h4><i class="fas fa-chart-line"></i> Data Science &amp; ML</h4>
     <div class="tech-pills">
       <span class="tech-pill">Scikit-learn</span>
       <span class="tech-pill">PyTorch</span>
@@ -125,7 +125,7 @@ Here are some of the key technologies and tools I'm proficient with:
     </div>
   </div>
   <div class="tech-category">
-    <h4>Cloud &amp; DevOps</h4>
+    <h4><i class="fas fa-cloud"></i> Cloud &amp; DevOps</h4>
     <div class="tech-pills">
       <span class="tech-pill">AWS</span>
       <span class="tech-pill">S3</span>
@@ -136,7 +136,7 @@ Here are some of the key technologies and tools I'm proficient with:
     </div>
   </div>
   <div class="tech-category">
-    <h4>GIS &amp; Databases</h4>
+    <h4><i class="fas fa-database"></i> GIS &amp; Databases</h4>
     <div class="tech-pills">
       <span class="tech-pill">QGIS</span>
       <span class="tech-pill">PostGIS</span>
