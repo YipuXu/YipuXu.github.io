@@ -33,27 +33,119 @@
   });
 </script>
 
-<!-- Vanta.js for animated hero -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+<!-- Vanta.js for animated hero with fallback -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  if (document.getElementById('vanta-hero')) {
-    VANTA.GLOBE({
-      el: "#vanta-hero",
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 500.00,
-      minWidth: 200.00,
-      scale: 1.00,
-      scaleMobile: 0.80,
-      color: 0x64b5f6, // Softer blue
-      color2: 0x42a5f5, // Complementary blue
-      backgroundColor: 0x1e3c72, // Matches gradient start
-      size: 1.20,
-      speed: 0.6
-    });
+  const heroElement = document.getElementById('vanta-hero');
+  if (!heroElement) return;
+
+  // Function to create fallback animation
+  function createFallbackAnimation() {
+    heroElement.classList.add('vanta-fallback');
+    
+    // Create animated particles
+    const particleCount = 30;
+    for (let i = 0; i < particleCount; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.left = Math.random() * 100 + '%';
+      particle.style.top = Math.random() * 100 + '%';
+      particle.style.animationDelay = Math.random() * 20 + 's';
+      particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+      heroElement.appendChild(particle);
+    }
   }
+
+  // Try to load Vanta.js with error handling
+  let threejsLoaded = false;
+  let vantaLoaded = false;
+  
+  // Load Three.js with backup CDN
+  function loadThreeJS() {
+    const threeScript = document.createElement('script');
+    threeScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js';
+    threeScript.onload = function() {
+      threejsLoaded = true;
+      checkAndInitVanta();
+    };
+    threeScript.onerror = function() {
+      // Try backup CDN
+      const backupScript = document.createElement('script');
+      backupScript.src = 'https://unpkg.com/three@0.134.0/build/three.min.js';
+      backupScript.onload = function() {
+        threejsLoaded = true;
+        checkAndInitVanta();
+      };
+      backupScript.onerror = function() {
+        console.warn('All Three.js CDNs failed, using fallback animation');
+        createFallbackAnimation();
+      };
+      document.head.appendChild(backupScript);
+    };
+    document.head.appendChild(threeScript);
+  }
+  
+  // Load Vanta.js with backup CDN
+  function loadVantaJS() {
+    const vantaScript = document.createElement('script');
+    vantaScript.src = 'https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js';
+    vantaScript.onload = function() {
+      vantaLoaded = true;
+      checkAndInitVanta();
+    };
+    vantaScript.onerror = function() {
+      // Try backup CDN
+      const backupScript = document.createElement('script');
+      backupScript.src = 'https://unpkg.com/vanta@latest/dist/vanta.globe.min.js';
+      backupScript.onload = function() {
+        vantaLoaded = true;
+        checkAndInitVanta();
+      };
+      backupScript.onerror = function() {
+        console.warn('All Vanta.js CDNs failed, using fallback animation');
+        createFallbackAnimation();
+      };
+      document.head.appendChild(backupScript);
+    };
+    document.head.appendChild(vantaScript);
+  }
+  
+  // Load both libraries
+  loadThreeJS();
+  loadVantaJS();
+  
+  // Function to initialize Vanta when both libraries are loaded
+  function checkAndInitVanta() {
+    if (threejsLoaded && vantaLoaded && window.VANTA) {
+      try {
+        VANTA.GLOBE({
+          el: "#vanta-hero",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 500.00,
+          minWidth: 200.00,
+          scale: 1.00,
+          scaleMobile: 0.80,
+          color: 0x64b5f6,
+          color2: 0x42a5f5,
+          backgroundColor: 0x1e3c72,
+          size: 1.20,
+          speed: 0.6
+        });
+      } catch (error) {
+        console.warn('Vanta.js initialization failed:', error);
+        createFallbackAnimation();
+      }
+    }
+  }
+  
+  // Fallback timer - if Vanta doesn't load within 5 seconds, use fallback
+  setTimeout(function() {
+    if (!window.VANTA && !heroElement.classList.contains('vanta-fallback')) {
+      console.warn('Vanta.js timeout, using fallback animation');
+      createFallbackAnimation();
+    }
+  }, 5000);
 });
 </script>

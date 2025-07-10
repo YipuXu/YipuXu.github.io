@@ -48,9 +48,9 @@ This project provides a comprehensive analysis of public transport accessibility
 
 {% include base_path %}
 
-<figure style="text-align: center; margin: 2rem 0;">
-  <img src="{{ base_path }}/images/box-hill-underserved-areas.png" alt="Box Hill Underserved Areas Map" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-  <figcaption style="margin-top: 0.8rem; font-style: italic; color: #6c757d; font-size: 0.9rem;">Map showing underserved residential areas (purple blocks) in Box Hill that are more than 300 meters from the nearest public transport stop. The analysis reveals significant service gaps in outer residential zones.</figcaption>
+<figure class="image-map">
+  <img src="{{ base_path }}/images/box-hill-underserved-areas.png" alt="Box Hill Underserved Areas Map">
+  <figcaption>Map showing underserved residential areas (purple blocks) in Box Hill that are more than 300 meters from the nearest public transport stop. The analysis reveals significant service gaps in outer residential zones.</figcaption>
 </figure>
 
 ### Service Imbalance & Peak Hour Pressures
@@ -58,9 +58,9 @@ This project provides a comprehensive analysis of public transport accessibility
 #### Transport Mode Distribution
 The Box Hill network shows a significant imbalance in transport mode coverage:
 
-<figure style="text-align: center; margin: 2rem 0;">
-  <img src="{{ base_path }}/images/box-hill-transport-pie-chart.png" alt="Public Transport Route Analysis for Box Hill" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-  <figcaption style="margin-top: 0.8rem; font-style: italic; color: #6c757d; font-size: 0.9rem;">Distribution of public transport modes in Box Hill area. The overwhelming reliance on bus services (140 stops) compared to minimal tram (4 stops) and train (1 stop) coverage highlights the need for network diversification.</figcaption>
+<figure class="image-chart">
+  <img src="{{ base_path }}/images/box-hill-transport-pie-chart.png" alt="Public Transport Route Analysis for Box Hill">
+  <figcaption>Distribution of public transport modes in Box Hill area. The overwhelming reliance on bus services (140 stops) compared to minimal tram (4 stops) and train (1 stop) coverage highlights the need for network diversification.</figcaption>
 </figure>
 
 - The Box Hill network is heavily reliant on **buses (140 stops)**, with minimal coverage from **trams (4 stops)** and **trains (1 stop)**
@@ -68,9 +68,9 @@ The Box Hill network shows a significant imbalance in transport mode coverage:
 #### Peak Hour Analysis
 Passenger traffic analysis reveals distinct peak periods and bottlenecks:
 
-<figure style="text-align: center; margin: 2rem 0;">
-  <img src="{{ base_path }}/images/hourly-arrival-departure-counts.png" alt="Hourly Passenger Flow Analysis" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-  <figcaption style="margin-top: 0.8rem; font-style: italic; color: #6c757d; font-size: 0.9rem;">Hourly passenger arrival and departure counts throughout the day. The graph clearly shows peak periods during morning (8-9 AM) and evening (5-6 PM) commute times, with the highest activity at 5 PM (5,671 passengers).</figcaption>
+<figure class="image-chart">
+  <img src="{{ base_path }}/images/hourly-arrival-departure-counts.png" alt="Hourly Passenger Flow Analysis">
+  <figcaption>Hourly passenger arrival and departure counts throughout the day. The graph clearly shows peak periods during morning (8-9 AM) and evening (5-6 PM) commute times, with the highest activity at 5 PM (5,671 passengers).</figcaption>
 </figure>
 
 - Passenger traffic peaks between **8-9 AM and 5-6 PM**, with the highest count of **5,671 passengers at 5 PM**
@@ -78,9 +78,9 @@ Passenger traffic analysis reveals distinct peak periods and bottlenecks:
 #### Waiting Time Analysis
 Peak hour service efficiency varies significantly across the network:
 
-<figure style="text-align: center; margin: 2rem 0;">
-  <img src="{{ base_path }}/images/box-hill-waiting-times-heatmap.png" alt="Peak Hour Waiting Times Heatmap" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-  <figcaption style="margin-top: 0.8rem; font-style: italic; color: #6c757d; font-size: 0.9rem;">Heatmap visualization of average waiting times during peak hours. Red areas indicate longer waiting times, with Surrey Park/Canterbury Rd showing the highest delays. This spatial analysis helps identify priority areas for service improvement.</figcaption>
+<figure class="image-map">
+  <img src="{{ base_path }}/images/box-hill-waiting-times-heatmap.png" alt="Peak Hour Waiting Times Heatmap">
+  <figcaption>Heatmap visualization of average waiting times during peak hours. Red areas indicate longer waiting times, with Surrey Park/Canterbury Rd showing the highest delays. This spatial analysis helps identify priority areas for service improvement.</figcaption>
 </figure>
 
 - During morning peak hours, some stops experience long delays, with **Surrey Park/Canterbury Rd** having the longest average wait time of **12 minutes and 37.5 seconds**
