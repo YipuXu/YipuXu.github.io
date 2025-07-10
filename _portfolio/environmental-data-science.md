@@ -1,11 +1,13 @@
 ---
 title: "Environmental Data Science: Bushfire & Agriculture Analysis"
 excerpt: "Data analytics project investigating correlations between bushfires, land cover, and agricultural impact using R and advanced statistical analysis."
+layout: custom
 header:
   image: /images/portfolio-environmental-data.jpg
   teaser: /images/portfolio-environmental-data.jpg
 order: 2
 collection: portfolio
+author_profile: true
 ---
 
 # Environmental Data Science: Bushfire & Agriculture Impact Analysis

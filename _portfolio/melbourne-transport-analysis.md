@@ -1,11 +1,13 @@
 ---
 title: "Melbourne Public Transport Accessibility Analysis"
 excerpt: "Urban Computing project analyzing Melbourne's public transport network accessibility and efficiency using GIS and data science techniques."
+layout: custom
 header:
   image: /images/portfolio-melbourne-transport.jpg
   teaser: /images/portfolio-melbourne-transport.jpg
 order: 1
 collection: portfolio
+author_profile: true
 ---
 
 # Urban Computing: Accessibility and Efficiency Analysis of Melbourne's Public Transport

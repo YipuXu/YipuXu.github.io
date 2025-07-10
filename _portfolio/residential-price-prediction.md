@@ -1,11 +1,13 @@
 ---
 title: "Residential Market Price Prediction and Analysis of Influencing Factors Using K-Nearest Neighbors (KNN) Regression"
 excerpt: "Built and tuned a KNN Regression model to predict property prices, implementing advanced feature engineering using regular expressions to extract features from text descriptions."
+layout: custom
 header:
   image: /images/portfolio-residential-prediction.jpg
   teaser: /images/portfolio-residential-prediction.jpg
 order: 3
 collection: portfolio
+author_profile: true
 ---
 
 ### Project Overview

@@ -1,11 +1,13 @@
 ---
 title: "AI Othello Game: Design and Implementation in C#"
 excerpt: "My undergraduate thesis project, an Othello (Reversi) game developed in C#. It features a custom AI with a phased composite strategy, full game functionality including replay and file I/O, and was built on the .NET Framework."
+layout: custom
 header:
   image: /images/portfolio-ai-othello.jpg
   teaser: /images/portfolio-ai-othello.jpg
 order: 6
 collection: portfolio
+author_profile: true
 ---
 
 # AI Othello Game: Design and Implementation in C#

@@ -1,11 +1,13 @@
 ---
 title: "Serverless Bird Species Recognition Platform on AWS"
 excerpt: "An end-to-end serverless platform on AWS that leverages AI/ML services for real-time bird species identification from images."
+layout: custom
 header:
   image: /images/portfolio-aws-bird-recognition.jpg
   teaser: /images/portfolio-aws-bird-recognition.jpg
 order: 5
 collection: portfolio
+author_profile: true
 ---
 
 # Cloud Computing: Serverless Bird Species Recognition Platform on AWS

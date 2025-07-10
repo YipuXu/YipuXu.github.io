@@ -717,3 +717,100 @@
     }
   }
 }
+
+/*
+   Project Page Styles
+   ========================================================================== */
+.portfolio-content {
+  .page__content {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e1e8ed;
+    transition: box-shadow 0.3s ease;
+    
+    &:hover {
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    }
+    
+    // Project title styling
+    h1 {
+      font-family: 'Montserrat', $sans-serif;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+    
+    // Section headers
+    h2 {
+      font-family: 'Montserrat', $sans-serif;
+      font-weight: 600;
+      color: #34495e;
+      font-size: 1.4rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #3498db;
+    }
+    
+    h3 {
+      font-family: 'Montserrat', $sans-serif;
+      font-weight: 600;
+      color: #2c3e50;
+      font-size: 1.2rem;
+      margin-top: 2rem;
+      margin-bottom: 0.8rem;
+    }
+    
+    // Lists styling
+    ul, ol {
+      margin-bottom: 1.5rem;
+      
+      li {
+        margin-bottom: 0.5rem;
+        line-height: 1.6;
+        
+        strong {
+          color: #2c3e50;
+        }
+      }
+    }
+    
+    // Code blocks
+    code {
+      background: #f8f9fa;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.9em;
+      color: #e83e8c;
+    }
+    
+    // Blockquotes
+    blockquote {
+      border-left: 4px solid #3498db;
+      background: #f8f9fa;
+      padding: 1rem 1.5rem;
+      margin: 1.5rem 0;
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      
+      p {
+        margin: 0;
+        color: #6c757d;
+      }
+    }
+    
+    // Bottom note styling
+    p:last-child {
+      font-style: italic;
+      color: #6c757d;
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid #ecf0f1;
+    }
+  }
+}

@@ -1,11 +1,13 @@
 ---
 title: "Chatbot Dialogue Utility Prediction"
 excerpt: "Machine Learning project predicting human-chatbot interaction utility using advanced NLP techniques and XGBoost modeling."
+layout: custom
 header:
   image: /images/portfolio-chatbot-prediction.jpg
   teaser: /images/portfolio-chatbot-prediction.jpg
 order: 4
 collection: portfolio
+author_profile: true
 ---
 
 # Machine Learning: Predictive Analysis of Chatbot Dialogue Utility
