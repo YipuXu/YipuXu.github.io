@@ -33,96 +33,27 @@
   });
 </script>
 
-<!-- Hero Animation - Always Working Version -->
+<!-- Vanta.js for animated hero -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  const heroElement = document.getElementById('vanta-hero');
-  if (!heroElement) {
-    console.log('No hero element found');
-    return;
+  if (document.getElementById('vanta-hero')) {
+    VANTA.GLOBE({
+      el: "#vanta-hero",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 500.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 0.80,
+      color: 0x64b5f6, // Softer blue
+      color2: 0x42a5f5, // Complementary blue
+      backgroundColor: 0x1e3c72, // Matches gradient start
+      size: 1.20,
+      speed: 0.6
+    });
   }
-
-  console.log('Hero element found, initializing animation');
-
-  // Always create the fallback animation first (ensures something always shows)
-  function createAnimation() {
-    heroElement.classList.add('vanta-fallback');
-    
-    // Create animated particles
-    const particleCount = 25;
-    for (let i = 0; i < particleCount; i++) {
-      const particle = document.createElement('div');
-      particle.className = 'particle';
-      particle.style.left = Math.random() * 100 + '%';
-      particle.style.top = Math.random() * 100 + '%';
-      particle.style.animationDelay = Math.random() * 15 + 's';
-      particle.style.animationDuration = (Math.random() * 8 + 12) + 's';
-      heroElement.appendChild(particle);
-    }
-    console.log('Fallback animation created successfully');
-  }
-
-  // Start with the working animation immediately
-  createAnimation();
-
-  // Optional: Try to load and replace with Vanta.js if available
-  function tryVantaUpgrade() {
-    // Load Three.js first
-    const threeScript = document.createElement('script');
-    threeScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js';
-    threeScript.onload = function() {
-      // Then load Vanta.js
-      const vantaScript = document.createElement('script');
-      vantaScript.src = 'https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js';
-      vantaScript.onload = function() {
-        // Try to upgrade to Vanta if both loaded successfully
-        setTimeout(function() {
-          if (window.THREE && window.VANTA && window.VANTA.GLOBE) {
-            try {
-              // Remove fallback particles
-              const particles = heroElement.querySelectorAll('.particle');
-              particles.forEach(p => p.remove());
-              heroElement.classList.remove('vanta-fallback');
-              
-              // Initialize Vanta
-              VANTA.GLOBE({
-                el: "#vanta-hero",
-                mouseControls: true,
-                touchControls: true,
-                gyroControls: false,
-                minHeight: 500.00,
-                minWidth: 200.00,
-                scale: 1.00,
-                scaleMobile: 0.80,
-                color: 0x64b5f6,
-                color2: 0x42a5f5,
-                backgroundColor: 0x1e3c72,
-                size: 1.20,
-                speed: 0.6
-              });
-              console.log('Upgraded to Vanta.js successfully');
-            } catch (error) {
-              console.log('Vanta upgrade failed, keeping fallback:', error);
-              // If Vanta fails, restore fallback
-              if (!heroElement.classList.contains('vanta-fallback')) {
-                createAnimation();
-              }
-            }
-          }
-        }, 500);
-      };
-      vantaScript.onerror = function() {
-        console.log('Vanta.js failed to load, keeping fallback');
-      };
-      document.head.appendChild(vantaScript);
-    };
-    threeScript.onerror = function() {
-      console.log('Three.js failed to load, keeping fallback');
-    };
-    document.head.appendChild(threeScript);
-  }
-
-  // Try to upgrade to Vanta after a brief delay
-  setTimeout(tryVantaUpgrade, 500);
 });
 </script>
